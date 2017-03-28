@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Profiles */
+/* @var $model app\models\Trivia */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Profiles', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Trivias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="profiles-view">
+<div class="trivia-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,16 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'slug',
-            'completeName',
-            'nickname',
-            'emailAddress:email',
-            'homeAddress',
-            'gender',
-            'cellphoneNumber',
-            'comments',
+            'question',
+            'answer',
+            'profile_id',
         ],
-		
     ]) ?>
 
 </div>
